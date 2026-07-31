@@ -11,6 +11,11 @@ import UserNotifications
     public typealias DarwinApplication = NSApplication
 #endif
 
+/// `@objc(PushPlugin)` pins the Objective-C runtime name, so the
+/// `GeneratedPluginRegistrant.m` that Flutter emits for iOS resolves
+/// `[PushPlugin registerWithRegistrar:]` without the module prefix. macOS
+/// emits a Swift registrant and resolves the class directly.
+@objc(PushPlugin)
 public class PushPlugin: NSObject, FlutterPlugin {
     private let flutterPluginRegistrar: FlutterPluginRegistrar
     private var pushHostHandlers: PushHostHandlers
@@ -81,3 +86,10 @@ public class PushPlugin: NSObject, FlutterPlugin {
         }
     #endif
 }
+
+/// Source compatibility for anyone referencing the pre-3.4.0 name. The
+/// Objective-C `PushPlugin` trampoline that used to forward to this class was
+/// removed, because it made the Objective-C target depend on the Swift target
+/// while the Swift target already depends on Objective-C for the pigeon types,
+/// and Swift Package Manager cannot express that cycle.
+public typealias SwiftPushPlugin = PushPlugin

@@ -1,7 +1,10 @@
 import Foundation
 import UserNotifications
 
-import push_pigeon
+// See the note in PushHostHandlers.swift.
+#if SWIFT_PACKAGE
+    import push_pigeon
+#endif
 
 extension PURemoteMessage {
     static func from(userInfo: [AnyHashable: Any]) -> PURemoteMessage {

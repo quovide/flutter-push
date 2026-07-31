@@ -1,7 +1,12 @@
 import Foundation
 import UserNotifications
 
-import push_pigeon
+// Swift Package Manager builds the pigeon Objective-C sources as a separate
+// target, so the generated types need an explicit import. CocoaPods compiles
+// every source into one module, where that module does not exist.
+#if SWIFT_PACKAGE
+    import push_pigeon
+#endif
 
 #if os(iOS)
     import Flutter
