@@ -5,11 +5,9 @@
 *.swp
 .DS_Store
 .atom/
-.build/
 .buildlog/
 .history
 .svn/
-.swiftpm/
 
 # IntelliJ related
 *.iml
@@ -53,12 +51,14 @@ build/
 **/ios/**/.vagrant/
 **/ios/**/DerivedData/
 **/ios/**/Icon?
+**/ios/**/Pods/
 **/ios/**/.symlinks/
 **/ios/**/profile
 **/ios/**/xcuserdata
 **/ios/.generated/
 **/ios/Flutter/App.framework
 **/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
 **/ios/Flutter/Generated.xcconfig
 **/ios/Flutter/ephemeral
 **/ios/Flutter/app.flx

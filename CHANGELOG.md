@@ -1,9 +1,3 @@
-## Unreleased
-
-- **Breaking:** replace CocoaPods with Swift Package Manager for iOS and macOS.
-- **Breaking:** require Flutter 3.44, Dart 3, iOS 13, and macOS 10.15.
-- Preserve the existing Dart API and push-notification behavior.
-
 ## 3.3.3
 
 - fix(android): lower java version back to 1.8

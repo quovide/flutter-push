@@ -2,15 +2,6 @@
 
 This is a reference guide to updating your application through breaking changes in the push package.
 
-## Swift Package Manager-only Apple integration
-
-The next release after 3.3.3 removes CocoaPods support for iOS and macOS.
-Upgrade to Flutter 3.44 or later and migrate the Runner project to Flutter's
-generated `FlutterGeneratedPluginSwiftPackage`. The minimum supported versions
-are Dart 3, iOS 13, and macOS 10.15.
-
-The Dart API and notification behavior are unchanged.
-
 ## Breaking changes in v3.0
 
 Similar to breaking changes in v2, listening to new tokens uses a callback based API. This removes the usage of streams completely from the API, opting for a simpler, callback API.
